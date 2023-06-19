@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.container{
+    width: 600px;
+    margin-top: 50px;
+}
+.header{
+    width: 600px;
+    height: 130px;
+    text-align: center;
+    background-color: orange;
+    padding: 10px 40px ;
+    color: white;
+}
+.header h2{
+    font-size: 35px;
+    padding: 10px;
+}
+input{
+    width: 75%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    float: left;
+}
+button{
+    width: 25%;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    float: left;
+    background-color: #9d9d9d;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #bbb;
+}
+.container ul{
+    max-height: 300px;
+    overflow-y: auto;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    background-color: #eee;
+    padding: 12px 8px 12px 40px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+    user-select: none;
+    position: relative;
+}
+ul li:hover{
+    background-color: rgb(204, 204, 204)
+}
+.closeBtn{
+    position: absolute;
+    right: 15px;
+    display: none;
+}
+ul li:hover .closeBtn{
+    display: inline-block;
+}
+ul li:hover .closeBtn i:hover{
+    color: #ec1d1d
+}
+ul li.done{
+    background-color: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+ul li.check::before{
+    content: '\002714';
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    color: rgb(80, 250, 195);
+    font-size: 24px;
+}
